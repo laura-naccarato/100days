@@ -17,17 +17,13 @@
 <body <?php body_class(); ?>>
 
 <header>
-  <div class="container">
-    <h1>
-      <a href="<?php echo home_url( '/' ); ?>" title="<?php bloginfo( 'name', 'display' ); ?>" rel="home">
-        <?php bloginfo( 'name' ); ?>
-      </a>
-    </h1>
-
-    <?php wp_nav_menu( array(
-      'container' => false,
-      'theme_locations' => 'primary'
-    )); ?>
+  <div class="container headerContent">
+      <h1>
+          <?php echo bloginfo( 'name' ); ?>
+        </a>
+      </h1>
+      <h2><?php echo bloginfo ( 'description' ); ?></h2>
+      <p>Like what you see? <span><a href="#">Email Me!</a></span></p>
   </div> <!-- /.container -->
 </header><!--/.header-->
 
