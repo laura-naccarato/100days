@@ -177,14 +177,9 @@ header {
   background: #9b59b6;
   color: #f7df1e; }
 
-.container {
+.content {
   max-width: 1200px;
   margin: 0 auto; }
-
-.content {
-  float: left;
-  width: 65%;
-  margin-right: 5%; }
 
 .full {
   width: 100%; }
@@ -455,3 +450,20 @@ p.form-allowed-tags, .nocomments {
 
 #respond p, #comments-list ul #respond {
   margin: 0; }
+
+.about {
+  padding: 3% 0; }
+  .about p {
+    padding-bottom: 2%; }
+    .about p:last-child {
+      padding: 0; }
+
+.left {
+  width: 15%;
+  float: left;
+  margin-right: 5%; }
+
+.button {
+  padding: .5%;
+  background: #f7df1e;
+  color: #9b59b6; }

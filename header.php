@@ -23,7 +23,7 @@
         </a>
       </h1>
       <h2><?php echo bloginfo ( 'description' ); ?></h2>
-      <p>Like what you see? <span><a href="#">Email Me!</a></span></p>
+      <p>Like what you see? <span class="button"><a href="#">Email Me!</a></span></p>
   </div> <!-- /.container -->
 </header><!--/.header-->
 
