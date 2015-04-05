@@ -467,3 +467,26 @@ p.form-allowed-tags, .nocomments {
   padding: .5%;
   background: #f7df1e;
   color: #9b59b6; }
+
+.dailyPost {
+  position: relative;
+  text-align: center;
+  width: 25%;
+  min-height: 400px;
+  float: left;
+  background-repeat: no-repeat; }
+  .dailyPost .dailyPostContent {
+    top: 0%;
+    bottom: 0;
+    left: 0%;
+    padding: 0 5%;
+    padding-top: 15%; }
+    .dailyPost .dailyPostContent a {
+      -webkit-transition: all 1s;
+      -webkit-filter: opacity(1);
+      filter: opacity(1);
+      color: black; }
+    .dailyPost .dailyPostContent:hover {
+      -webkit-filter: opacity(0.5);
+      filter: opacity(0.5);
+      -webkit-transition: all 1s; }

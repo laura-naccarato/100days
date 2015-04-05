@@ -327,3 +327,30 @@ p.form-allowed-tags, .nocomments { display:none; }
   background: $yellow;
   color: $purple;
 }
+.dailyPost {
+  position: relative;
+  text-align: center; 
+  width: 25%;
+  min-height: 400px;
+  float: left;
+  background-repeat: no-repeat;
+  // background-size: cover;
+  .dailyPostContent{
+      top: 0%;
+      bottom: 0;
+      left: 0%;
+      padding: 0 5%;
+      padding-top: 15%;
+    a {
+      -webkit-transition: all 1s;
+      -webkit-filter: opacity(1);
+      filter: opacity(1); 
+      color: black;
+    }
+    &:hover {
+      -webkit-filter: opacity(.5);
+      filter: opacity(.5);
+      -webkit-transition: all 1s;
+    }
+  }
+}

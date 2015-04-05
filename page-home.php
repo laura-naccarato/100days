@@ -15,23 +15,29 @@ get_header();  ?>
     </div> <!-- /.container -->
   </section>
   <section class="days">
-    <div class="content">
     <?php
-      query_posts( array( 'post_type' => 'day') );
-      if ( have_posts() ) : while ( have_posts() ) : the_post();?>
-      <div class="dailyPost"> 
-        <?php   the_post_thumbnail("large"); ?>
-        <div class="dailyPostContent"> 
-        <p class="technologies">  <?php the_terms($post->ID, "technologies", "", ", "); ?></p>
+      query_posts( array( 'post_type' => 'day',
+        'order' => 'ASC') );
 
-        <h3><?php the_title(); ?></h3>
-        <?php the_content(); ?>
-          <a href="<?php  the_field('portfolio_url'); ?>" class="portfolioLink" target="_blank">Visit the full page</a>
-        </div>
+      if ( have_posts() ) : while ( have_posts() ) : the_post();?>
+      <?php global $post; ?>
+      <?php
+      $src = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), array( 5600,1000 ), false, '' );
+      ?>
+      <div class="dailyPost" style="background: url(<?php echo $src[0]; ?>) no-repeat; background-size: cover"> 
+        <a href="<?php  the_field('link'); ?>">
+
+
+          <div class="dailyPostContent"> 
+          <h3><?php the_title(); ?></h3>
+          <?php  the_field('description'); ?>
+          <p class="technologies">  <?php the_terms($post->ID, "technology", "", ", "); ?></p>
+          </div>
+        </a>
+        
       </div>
-              <?php endwhile; endif; wp_reset_query(); ?>
-              </div>
-  </section>
+      <?php endwhile; endif; wp_reset_query(); ?>
+    </section>
 
 
 
