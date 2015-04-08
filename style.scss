@@ -132,6 +132,9 @@ pre {
     font-size: 5rem;
     text-shadow: 5px 5px $darkPurple;
   }
+  p{
+    margin-bottom: 3%;
+  }
 }
 /* =============================================================================
                    Sidebar
@@ -323,9 +326,22 @@ p.form-allowed-tags, .nocomments { display:none; }
   margin-right: 5%;
 }
 .button {
-  padding: .5%;
-  background: $yellow;
-  color: $purple;
+  font-size:  1.5rem;
+  color: $yellow;
+  padding: 1%;
+  background: linear-gradient(to left, $purple 50%, $yellow 50%);
+  background-size: 200% 100%;
+  background-position: right bottom;
+  border: 1px solid $yellow;
+    -webkit-transition:all .7s ease;
+    transition:all .7s ease;
+  &:hover {
+    color: $purple;
+    background-position: left bottom;    
+  }
+}
+.day {
+
 }
 .dailyPost {
   position: relative;
@@ -333,24 +349,39 @@ p.form-allowed-tags, .nocomments { display:none; }
   width: 25%;
   min-height: 400px;
   float: left;
-  background-repeat: no-repeat;
-  // background-size: cover;
   .dailyPostContent{
+      position: absolute;
+      background-color: rgba(white, 0.8);
       top: 0%;
       bottom: 0;
       left: 0%;
       padding: 0 5%;
       padding-top: 15%;
-    a {
       -webkit-transition: all 1s;
-      -webkit-filter: opacity(1);
-      filter: opacity(1); 
+    a, p, h3 {
+        margin: 0;
+        padding: 3% 0;
       color: black;
     }
     &:hover {
-      -webkit-filter: opacity(.5);
-      filter: opacity(.5);
       -webkit-transition: all 1s;
+      background-color: rgba(white, 0);
+      -webkit-filter: opacity(0);
+      filter: opacity(0); 
+      }
     }
-  }
+    .technologies {
+      text-align: center; 
+      padding-top: 65%;
+      a{
+        margin: 0 1%;
+        padding: 1% 4%;
+        display: inline-block;
+        background: rgba(black, 0.9);
+        color: white;
+        &:first-child{
+          display: none;
+        }
+      }
+    }
 }

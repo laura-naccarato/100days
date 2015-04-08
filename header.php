@@ -20,10 +20,10 @@
   <div class="container headerContent">
       <h1>
           <?php echo bloginfo( 'name' ); ?>
-        </a>
-      </h1>
+       </h1>
       <h2><?php echo bloginfo ( 'description' ); ?></h2>
-      <p>Like what you see? <span class="button"><a href="#">Email Me!</a></span></p>
+      <p>Like what you see? </p>
+      <a href="#" class="button">Email Me!</a>
   </div> <!-- /.container -->
 </header><!--/.header-->
 

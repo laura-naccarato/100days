@@ -266,3 +266,18 @@ function get_post_parent($post) {
 		return $post->ID;
 	}
 }
+
+// Font Awesome
+add_action( 'wp_enqueue_scripts', 'webendev_load_font_awesome', 99 );
+/**
+* Enqueue Font Awesome Stylesheet from MaxCDN
+*
+*/
+function webendev_load_font_awesome() {
+	if ( ! is_admin() ) {
+
+		wp_enqueue_style( 'font-awesome', 'http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css', null, '4.0.1' );
+
+	}
+
+}

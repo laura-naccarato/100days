@@ -241,6 +241,8 @@ pre {
     text-transform: uppercase;
     font-size: 5rem;
     text-shadow: 5px 5px #8c18bd; }
+  .headerContent p {
+    margin-bottom: 3%; }
 
 /* =============================================================================
                    Sidebar
@@ -464,29 +466,51 @@ p.form-allowed-tags, .nocomments {
   margin-right: 5%; }
 
 .button {
-  padding: .5%;
-  background: #f7df1e;
-  color: #9b59b6; }
+  font-size: 1.5rem;
+  color: #f7df1e;
+  padding: 1%;
+  background: linear-gradient(to left, #9b59b6 50%, #f7df1e 50%);
+  background-size: 200% 100%;
+  background-position: right bottom;
+  border: 1px solid #f7df1e;
+  -webkit-transition: all .7s ease;
+  transition: all .7s ease; }
+  .button:hover {
+    color: #9b59b6;
+    background-position: left bottom; }
 
 .dailyPost {
   position: relative;
   text-align: center;
   width: 25%;
   min-height: 400px;
-  float: left;
-  background-repeat: no-repeat; }
+  float: left; }
   .dailyPost .dailyPostContent {
+    position: absolute;
+    background-color: rgba(255, 255, 255, 0.8);
     top: 0%;
     bottom: 0;
     left: 0%;
     padding: 0 5%;
-    padding-top: 15%; }
-    .dailyPost .dailyPostContent a {
-      -webkit-transition: all 1s;
-      -webkit-filter: opacity(1);
-      filter: opacity(1);
+    padding-top: 15%;
+    -webkit-transition: all 1s; }
+    .dailyPost .dailyPostContent a, .dailyPost .dailyPostContent p, .dailyPost .dailyPostContent h3 {
+      margin: 0;
+      padding: 3% 0;
       color: black; }
     .dailyPost .dailyPostContent:hover {
-      -webkit-filter: opacity(0.5);
-      filter: opacity(0.5);
-      -webkit-transition: all 1s; }
+      -webkit-transition: all 1s;
+      background-color: rgba(255, 255, 255, 0);
+      -webkit-filter: opacity(0);
+      filter: opacity(0); }
+  .dailyPost .technologies {
+    text-align: center;
+    padding-top: 65%; }
+    .dailyPost .technologies a {
+      margin: 0 1%;
+      padding: 1% 4%;
+      display: inline-block;
+      background: rgba(0, 0, 0, 0.9);
+      color: white; }
+      .dailyPost .technologies a:first-child {
+        display: none; }
